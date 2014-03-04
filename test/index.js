@@ -1,4 +1,5 @@
 var lib = require('../');
+var request = require('request');
 
 describe('App', function() {
   describe('#constructor', function() {
@@ -25,6 +26,12 @@ describe('App', function() {
         url: 'baz'
       });
       d.url.should.equal('baz');
+    });
+    it('should use `request` by default', function() {
+      var d = new lib.App({
+        password: 'foobar'
+      });
+      d.request.should.equal(request);
     });
   });
 });
