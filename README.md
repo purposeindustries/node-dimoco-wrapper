@@ -1,4 +1,4 @@
-# node-dimoco
+# node-dimoco [![Build Status](https://travis-ci.org/purposeindustries/node-dimoco.png?branch=master)](https://travis-ci.org/purposeindustries/node-dimoco)
 
 ## Install
 
