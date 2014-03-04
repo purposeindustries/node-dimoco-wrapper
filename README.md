@@ -11,3 +11,7 @@ $ npm install dimoco
 ## Usage
 
 *Todo*
+
+## License
+
+MIT
