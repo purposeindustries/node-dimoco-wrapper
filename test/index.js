@@ -33,5 +33,12 @@ describe('App', function() {
       });
       d.request.should.equal(request);
     });
+    it('should accept `request` override', function() {
+      var d = new lib.App({
+        password: 'foobar',
+        request: 'foo'
+      });
+      d.request.should.equal('foo');
+    });
   });
 });
