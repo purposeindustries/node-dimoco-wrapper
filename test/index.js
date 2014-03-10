@@ -38,4 +38,15 @@ describe('App', function() {
       d.request.should.equal('foo');
     });
   });
+  describe('#isValidMO', function() {
+    var d;
+    beforeEach(function() {
+      d = new lib.App({
+        password: 'foobar'
+      });
+    });
+    it('should return bool', function() {
+      (typeof d.isValidMO()).should.equal('boolean')
+    });
+  });
 });
