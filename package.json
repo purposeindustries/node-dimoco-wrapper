@@ -7,7 +7,8 @@
     "test": "mocha -R spec -r should test/*.js",
     "test-bg": "mocha -R spec -r should -w test/*.js",
     "test-cov": "npm run-script lib-cov && COVERAGE=1 mocha -R html-cov -r should test/*.js > coverage.html",
-    "lib-cov": "jscoverage lib lib-cov"
+    "lib-cov": "npm run-script clean; jscoverage lib lib-cov",
+    "clean": "rm -rf lib-cov; rm coverage.html"
   },
   "repository": {
     "type": "git",
