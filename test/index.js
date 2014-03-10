@@ -46,7 +46,12 @@ describe('App', function() {
       });
     });
     it('should return bool', function() {
-      (typeof d.isValidMO()).should.equal('boolean')
+      (typeof d.isValidMO({})).should.equal('boolean')
+    });
+    it('should require object to validate', function() {
+      (function() {
+        d.isValidMO();
+      }).should.throw();
     });
   });
 });
