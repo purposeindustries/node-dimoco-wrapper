@@ -62,19 +62,16 @@ describe('App', function() {
         d.isValidMO();
       }).should.throw();
     });
-    it('should require `app-id`, `from`, `sms-id` fields', function() {
+    it('should require `from`, `smsId` fields', function() {
       d.isValidMO({
-        from: 'foo', 'sms-id': 'bar'
-      }).should.be.false;
-      d.isValidMO({
-        'app-id': 'foo', 'sms-id': 'bar'
-      }).should.be.false;
-      d.isValidMO({
-        from: 'foo', 'app-id': 'bar'
-      }).should.be.false;
-      d.isValidMO({
-        'app-id': 'baz', from: 'foo', 'sms-id': 'bar'
+        from: 'foo', smsId: 'bar'
       }).should.be.true;
-    })
+      d.isValidMO({
+        smsId: 'bar'
+      }).should.be.false;
+      d.isValidMO({
+        from: 'foo'
+      }).should.be.false;
+    });
   });
 });
