@@ -19,6 +19,9 @@ describe('App', function() {
         new lib.App();
       }).should.throw();
     });
+    it('should accept app-id', function() {
+      d.appId.should.equal('bar')
+    });
     it('should accept url override', function() {
       d = new lib.App({
         password: 'foobar',
