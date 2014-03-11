@@ -74,4 +74,12 @@ describe('App', function() {
       }).should.be.false;
     });
   });
+  describe('#MTUrl', function() {
+    beforeEach(function() {
+      d = new lib.App(conf);
+    });
+    it('should return `string`', function() {
+      d.MTUrl({}).should.be.a.String;
+    });
+  })
 });
