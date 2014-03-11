@@ -1,5 +1,4 @@
 var lib = require('../');
-var request = require('request');
 
 describe('App', function() {
   describe('#constructor', function() {
@@ -27,8 +26,8 @@ describe('App', function() {
       });
       d.url.should.equal('baz');
     });
-    it('should use `request` by default', function() {
-      d.request.should.equal(request);
+    it('should use default request', function() {
+      d.request.should.be.an.instanceof(Function);
     });
     it('should accept `request` override', function() {
       d = new lib.App({
